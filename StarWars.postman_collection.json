@@ -1,0 +1,149 @@
+{
+	"variables": [],
+	"info": {
+		"name": "StarWars",
+		"_postman_id": "c2632e0e-2a39-5a89-75a3-acf08c680e55",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SWAPI.DEV - Listar",
+			"request": {
+				"url": "https://swapi.dev/api/planets/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "SWAPI.DEV - BucaPorNome",
+			"request": {
+				"url": {
+					"raw": "https://swapi.dev/api/planets/?search=Alderaan",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"planets",
+						""
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "Alderaan",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "SWAPI.DEV - BuscaFilme",
+			"request": {
+				"url": "http://swapi.dev/api/films/1/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/planetas/",
+			"request": {
+				"url": "http://localhost:8080/planetas/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\":\"Alderaan\",\n\t\"clima\":\"Glacial\",\n\t\"terreno\":\"Montanhoso\"\n}\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Busca por id",
+			"request": {
+				"url": "http://localhost:8080/planetas/5f3c213a04cd7619b39b73ae",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Planeta",
+			"request": {
+				"url": "http://localhost:8080/planetas/5f3c213a04cd7619b39b73ae",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Busca por Nome",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/planetas/?nome=Alderaan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"planetas",
+						""
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "Alderaan",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Lista Planetas",
+			"request": {
+				"url": "http://localhost:8080/planetas/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
