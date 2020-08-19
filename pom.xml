@@ -19,14 +19,25 @@
 	</properties>
 
 	<dependencies>
+		<!-- MongoDb -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 		</dependency>
+		
+		<!-- Web Api -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<!-- Devtools -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		<!-- Swagger -->
 		<dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
@@ -37,6 +48,8 @@
             <artifactId>springfox-swagger-ui</artifactId>
             <version>2.6.1</version>
         </dependency>
+        
+        <!-- Consumir API externa -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
@@ -47,11 +60,11 @@
 		    <version>1.0.1.RELEASE</version>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
+			<groupId>io.projectreactor</groupId>
+			<artifactId>reactor-test</artifactId>
+			<scope>test</scope>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -63,9 +76,31 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+
+		
+		<!-- Testar API REST -->
 		<dependency>
-			<groupId>io.projectreactor</groupId>
-			<artifactId>reactor-test</artifactId>
+		      <groupId>io.rest-assured</groupId>
+		      <artifactId>rest-assured</artifactId>
+		      <version>4.2.0</version>
+		      <scope>test</scope>
+		</dependency>
+		<dependency>
+		      <groupId>io.rest-assured</groupId>
+		      <artifactId>json-path</artifactId>
+		      <version>4.2.0</version>
+		      <scope>test</scope>
+		</dependency>
+		<dependency>
+		      <groupId>io.rest-assured</groupId>
+		      <artifactId>json-schema-validator</artifactId>
+		      <version>4.2.0</version>
+		      <scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured-all</artifactId>
+			<version>4.2.0</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>

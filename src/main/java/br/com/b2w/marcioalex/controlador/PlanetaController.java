@@ -104,7 +104,8 @@ public class PlanetaController {
 			) {
 		
 		if ( nome != null ) {
-			Planeta planeta = planetaService.buscarPorNome(nome);
+			List<Planeta> planetas = planetaService.buscarPorNome(nome);
+			Planeta planeta = (planetas != null) ? planetas.get(0) : null;
 			
 			if ( planeta == null ) {
 				StandardError erro = new StandardError(String.valueOf(System.currentTimeMillis()), 

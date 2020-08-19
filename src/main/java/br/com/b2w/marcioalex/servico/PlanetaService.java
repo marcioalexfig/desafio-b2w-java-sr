@@ -18,7 +18,7 @@ public class PlanetaService {
 		return planetaRepository.findAll();
 	}
 	
-	public Planeta buscarPorNome(String nome) {
+	public List<Planeta> buscarPorNome(String nome) {
 		return planetaRepository.findByNomeContains(nome);
 	}
 	
